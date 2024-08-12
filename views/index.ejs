@@ -1,37 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header id="header">
-        <nav>
-            <div class="container">
-                <div class="text-center">
-                    <a href="#" class="nav-brand text-dark">User Management System</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+<%- include("include/header.ejs") %>
 
     <!-- Main site -->
-     <main class="site-main">
+    <main class="site-main">
         <div class="container">
             <div class="box-nav d-flex-justify-between">
                 <a href="/add-user" class="border-shadow">
-                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                    <span class="text-gradient">New User <i class="fa-solid fa-user"></i></i></span>
                 </a>
             </div>
 
             <!-- form -->
-             <form action="/" method="POST">
+            <form action="/" method="POST">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th>ID</th>
+                            <th>ID</th> 
                             <th>Name</th>
                             <th>Email</th>
                             <th>Gender</th>
@@ -40,26 +23,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>User</td>
-                            <td>mail@gsaj</td>
-                            <td>Male</td>
-                            <td>Active</td>
-                            <td>
-                                <a href="#" class="btn border-shadow update">
-                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                                </a>
-                                <a href="#" class="btn border-shadow delete">
-                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
-                                </a>
-                            </td>
-                        </tr>
+                        <%- include("include/show.ejs") %>
                     </tbody>
                 </table>
-             </form>
+            </form>
         </div>
-     </main>
-    
-</body>
-</html>
+    </main>
+
+<%- include("include/footer.ejs") %>
